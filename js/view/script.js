@@ -4,40 +4,41 @@ var view = {
 
 var main = function() {
 
-	var $set1 = [$('.kingdom1'), $('.library'), $('.forge')];
-	var $set2 = [$('.kingdom2'), $('.barracks'), $('.gym')];
-	var $set3 = [$('.kingdom3'), $('.cave')];
-	var setOrder = [$set1, $set2, $set3];
+	var interactiveSets = [[$('.library'), $('.forge')], [$('.barracks'), $('.gym')], [$('.cave')]];
 	var currentSet = 0;
 
 	var hideSet = function(setNum) {
 		for (var obj in setNum) {
-			setNum[obj].hide();
+			setNum[obj].fadeOut('fast');
 		}
 	}
 
 	var showSet = function(setNum) {
 		for (var obj in setNum) {
-			setNum[obj].show();
+			setNum[obj].fadeIn('slow');
 		}
 	}
 
+	hideSet(interactiveSets[1]);
+	hideSet(interactiveSets[2]);
+
 	$('.go-right').click(function() {
-		if (currentSet === (setOrder.length - 1)) { return; }
-		hideSet(setOrder[currentSet]);
+		if (currentSet === (interactiveSets.length - 1)) { return; }
+		hideSet(interactiveSets[currentSet]);
+		$('.kingdom').animate({left: "-=600"}, 1000)
+		$('.interactive').animate({left: "-=600"}, 1000)
 		currentSet++;
-		showSet(setOrder[currentSet]);
+		showSet(interactiveSets[currentSet]);
 	});
 
 	$('.go-left').click(function() {
 		if (currentSet === 0) { return; }
-		hideSet(setOrder[currentSet]);
+		hideSet(interactiveSets[currentSet]);
+		$('.kingdom').animate({left: "+=600"}, 1000)
+		$('.interactive').animate({left: "+=600"}, 1000)
 		currentSet--;
-		showSet(setOrder[currentSet]);
+		showSet(interactiveSets[currentSet]);
 	});
-
-	hideSet($set2);
-	hideSet($set3);
 	
 	currentNarrative = 1;
 	$('.narrative').hide();
@@ -50,7 +51,7 @@ var main = function() {
 
 	$('.start').click(function() {
 		$('.narrativeContainer').slideUp();
-	})
+	});
 
 }
 

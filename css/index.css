@@ -1,5 +1,5 @@
 body {
-	background-color: #000;
+	
 }
 
 .container {
@@ -8,9 +8,12 @@ body {
 }
 
 .main .slides {
-	position: relative;
 	width: 600px;
 	overflow: auto;
+}
+
+.slides .kingdom {
+	position: relative;
 }
 
 .narrative, {
@@ -22,11 +25,20 @@ body {
 }
 
 .go-left, .go-right {
+	position: relative;
 	font-size: 80px;
-	color: #fff;
+	z-index: 2;
+	background-color: red;
+	width: 80px;
+	height: 450px;
 }
 
-.interactive {
+.interactive-layer {
+	position: absolute;
+	z-index: 1;
+}
+
+.interactive-layer img {
 	position: absolute;
 }
 
