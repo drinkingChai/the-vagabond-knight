@@ -1,5 +1,5 @@
 body {
-	
+	background-color: #000;
 }
 
 .container {
@@ -28,9 +28,8 @@ body {
 	position: relative;
 	font-size: 80px;
 	z-index: 2;
-	background-color: red;
 	width: 80px;
-	height: 450px;
+	color: #fff;
 }
 
 .interactive-layer {
