@@ -22,7 +22,6 @@ body {
 }
 
 .go-left, .go-right {
-	height: 100%;
 	font-size: 80px;
 	color: #fff;
 }

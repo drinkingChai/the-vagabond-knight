@@ -22,10 +22,6 @@ var main = function() {
 		}
 	}
 
-	hideSet($set2);
-	hideSet($set3);
-	$('.narrative').hide();
-
 	$('.go-right').click(function() {
 		if (currentSet === (setOrder.length - 1)) { return; }
 		hideSet(setOrder[currentSet]);
@@ -39,6 +35,22 @@ var main = function() {
 		currentSet--;
 		showSet(setOrder[currentSet]);
 	});
+
+	hideSet($set2);
+	hideSet($set3);
+	
+	currentNarrative = 1;
+	$('.narrative').hide();
+	$('.narrative1').slideDown();
+	$('.next').click(function() {
+		$('.narrative:nth-child(' + currentNarrative.toString() + ')').hide();
+		currentNarrative++;
+		$('.narrative:nth-child(' + currentNarrative.toString() + ')').show();
+	});
+
+	$('.start').click(function() {
+		$('.narrativeContainer').slideUp();
+	})
 
 }
 
