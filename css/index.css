@@ -2,10 +2,45 @@ body {
 	background-color: #000;
 }
 
-.main .container {
+.container {
+	min-width: 800px;
+	max-width: 800px;
+}
+
+.main .slides {
 	position: relative;
+	width: 600px;
+	overflow: auto;
+}
+
+.narrative, {
+	position: fixed;
+}
+
+.go-left, .go-right, .slides {
+	display: inline-block;
+}
+
+.go-left, .go-right {
+	height: 100%;
+	font-size: 80px;
+	color: #fff;
 }
 
 .interactive {
 	position: absolute;
+}
+
+.narrative {
+	height: 200px;
+	width: 400px;
+	background-color: #fff;
+	margin-left: 100px;
+	border: 10px solid #cc7835;
+	background-color: #f9eade;
+}
+
+::-webkit-scrollbar {
+	/*hides scrollbar*/
+    display: none; 
 }
