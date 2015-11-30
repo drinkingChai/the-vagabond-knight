@@ -3,51 +3,99 @@ body {
 }
 
 .container {
-	min-width: 800px;
-	max-width: 800px;
+	min-width: 1000px;
+	max-width: 1000px;
 }
 
 .main .slides {
 	width: 600px;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .slides .kingdom {
 	position: relative;
 }
 
+.slides .dragons-lair {
+	position: relative;
+}
+
+.progress-bar {
+	border-radius: 5px;
+}
+
+.progressContainer {
+	position: fixed;
+	height: 20px;
+	margin-top: 20px;
+	width: 600px;
+	border: 2px solid #fff;
+	border-radius: 2px;
+	border-radius: 5px;
+}
+
+.playerHPContainer {
+	min-width: 170px;
+	height: 20px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+}
+
+.combatMenu {
+	position: fixed;
+	margin-left: 100px;
+	margin-top: 300px;
+}
+
 .narrative, {
 	position: fixed;
 }
 
-.go-left, .go-right, .slides {
+.go-left, .go-right, .slides, .status {
 	display: inline-block;
 }
 
 .go-left, .go-right {
 	position: relative;
 	font-size: 80px;
-	z-index: 2;
 	width: 80px;
 	color: #fff;
 }
 
-.interactive-layer {
-	position: absolute;
-	z-index: 1;
+.status {
+	position: relative;
+	width: 170px;
+	margin-left: 20px;
+	color: #fff;
 }
 
-.interactive-layer img {
-	position: absolute;
+.status p {
+	margin-bottom: 0;
 }
 
 .narrative {
-	height: 200px;
+	position: fixed;
+	height: 280px;
 	width: 400px;
 	background-color: #fff;
-	margin-left: 100px;
-	border: 10px solid #cc7835;
+	border-style: solid;
+	border-color: #cc7835;
+	border-width: 0 10px 10px 10px;
 	background-color: #f9eade;
+	padding: 20px;
+	z-index: 1;
+}
+
+button {
+	height: 45px;
+}
+
+.narrativeContainer {
+	margin-left: 100px;
+}
+
+.narrative button {
+	width: 100%;
 }
 
 ::-webkit-scrollbar {
