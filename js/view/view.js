@@ -69,9 +69,7 @@ var main = function() {
 
 	$('.close-nar').click(function() {
 		//close the narrative window
-		//if any narrative in narratives of imageToNarrative was closed, set its currentlyOpen to false
 		$('.narrative').slideUp();
-		imageToNarrative.currentlyOpen = false;
 	});
 
 	$('.close-money').click(function() {
