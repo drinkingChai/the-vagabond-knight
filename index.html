@@ -50,6 +50,14 @@
 							<button type="button" class="btn btn-default close-nar">Leave</button>
 						</div>
 
+						<div class="narrative cave">
+							<p>"You are about to enter the lair of the dragon!"</p>
+							<p>"Are you sure you want to proceed?"</p>
+							<p>"There is no turning back!"</p>
+							<button type="button" class="btn btn-default boss-fight">Yes!</button>
+							<button type="button" class="btn btn-default close-nar">Not yet..</button>
+						</div>
+
 						<div class="narrative playerWin">
 							<p>"You have defeated the dragon! Now... You can take the dragon hide and the cows and sell them to the neigboring kingdom for a lofty reward, but this kingdom's people will be very angry.. Or you can give the cows back and take your reward for slaying the dragon! Maybe you can open up a shop!!"</p>
 							<button type="button" class="btn btn-default close-nar try-again">Play Again?</button>
@@ -73,31 +81,28 @@
 
 						<div class="narrative no-money">
 							<p>"You can't afford that :( Explore and see if you can find a source of income"</p>
-							<button type="button" class="btn btn-default close-nar">Ok</button>
-						</div>
-						
-						
-						<div class="narrative opening narrative1">
-							<p>"You're a vagabond knight looking for riches"</p>
-							<button type="button" class="btn btn-default next">Next</button>
+							<button type="button" class="btn btn-default close-money">Ok</button>
 						</div>
 
-						<div class="narrative opening narrative2">
+						<div class="narrative no-fodder">
+							<p>"You have run out of fodder!"</p>
+							<button type="button" class="btn btn-default close-nar">Ok</button>
+						</div>
+
+						<div class="narrative opening narrative1">
+							<p>"You're a vagabond knight looking for riches"</p>
 							<p>"You came upon a post slay a dragon that's terrorizing this kingdom.. by stealing their cows"</p>
 							<button type="button" class="btn btn-default next">Next</button>
 						</div>
 
 						<div class="narrative opening narrative3">
 							<p>"You've got this!! But.. you have no idea how to slay a dragon :("</p>
-							<button type="button" class="btn btn-default next">Next</button>
-						</div>
-
-						<div class="narrative opening narrative4">
-							<p>"But your hopes will not be snuffed out! Use your wits and find clues to help you slay the dragon!"</p>
+							<p>"But your hopes will not be snuffed out!</p>
 							<button type="button" class="btn btn-default next">Next</button>
 						</div>
 
 						<div class="narrative opening narrative5">
+							<p>Use your wits and find clues to help you slay the dragon!"</p>
 							<p>"But don't delay! Other people are out to get this dragon too"</p>
 							<button type="button" class="btn btn-default start">Start</button>
 						</div>
@@ -140,7 +145,7 @@
 
 					<p>Health</p>
 					<div class="playerHPContainer">
-						<div class="progress-bar playerHealth" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">20</div>
+						<div class="progress-bar progress-bar-success playerHealth" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">20</div>
 					</div>
 					
 					<p>Strength</p>
@@ -161,9 +166,10 @@
 		<script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-		<script src="js/model/main.js"></script>
+		<script src="js/model/game.js"></script>
 		<script src="js/model/characters.js"></script>
-		<script src="js/controllers/controller.js"></script>
-		<script src="js/view/script.js"></script>
+		<script src="js/controllers/playerController.js"></script>
+		<script src="js/controllers/gameController.js"></script>
+		<script src="js/view/view.js"></script>
 	</body>
 </html>
