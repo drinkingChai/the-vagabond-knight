@@ -172,6 +172,7 @@ var main = function() {
 
 		playerController.useFodder();
 		jqView.dragonTakesDamage();
+		jqView.updatePlayerStats();
 		jqView.showEndMessage();
 	});
 

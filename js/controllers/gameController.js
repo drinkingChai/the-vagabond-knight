@@ -15,13 +15,6 @@ var gameController = {
 	},
 	playerTakesDamage: function() {
 		//calculate damage player takes
-		if (player.usingFodder) {
-			//if using fodder, player takes no damage
-			//decrements fodder and sets usingFodder to false
-			player.fodder -= 1;
-			player.usingFodder = false;
-		}
-
 		var damageToPlayer = game.dragonAttack();	//dragon's attack is calculated
 		if (player.guarding) {
 			//if player is guarding, player takes half of the damage
@@ -40,6 +33,12 @@ var gameController = {
 		//calculate damage dragon takes
 		var critRoll = Math.random();		//calculate critical strike with player crititcal percent
 		damagetoDragon = Math.floor(player.strength/2)
+		if (player.usingFodder) {
+			//if using fodder, player takes no damage
+			//decrements fodder and sets usingFodder to false
+			player.fodder--;
+			player.usingFodder = false;
+		}
 		if (critRoll < (100 - player.critical)/100) {
 			damagetoDragon += damagetoDragon * 0.5;
 		}
